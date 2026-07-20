@@ -36,6 +36,11 @@ function Login() {
                     response.data.name
                 );
 
+                localStorage.setItem(
+                    "email",
+                     response.data.email
+                    );
+
                 alert("Login Successful");
 
                 navigate("/");

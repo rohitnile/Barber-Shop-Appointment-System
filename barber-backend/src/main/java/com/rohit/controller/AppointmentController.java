@@ -1,5 +1,7 @@
 package com.rohit.controller;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -91,5 +93,11 @@ public class AppointmentController {
     @GetMapping("/status-count")
     public List<Object[]> getStatusCount() {
         return appointmentRepository.countAppointmentsByStatus();
+    }
+    
+    @GetMapping("/available-slots")
+    public String test() {
+        System.out.println("Inside test");
+        return "Working";
     }
 }

@@ -66,8 +66,11 @@ function BookAppointment() {
 
             })
             .catch((error) => {
-                console.error(error);
-                alert("Booking Failed");
+                if (error.response) {
+                    alert(error.response.data);
+                } else {
+                    alert("Booking Failed");
+                }
             });
     };
 
